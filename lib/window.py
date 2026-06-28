@@ -109,7 +109,7 @@ class Window:
         log(f"leaderboard POST: {name} ({score})")
 
         # make the post
-        leaderBoardPeriod = 1
+        leaderBoardPeriod = 8
         url = "https://u9m0v5iwsk.execute-api.us-west-2.amazonaws.com/default/classBuzzer"
         data = { #"{'TableName':'classLeaderboardTable','EventType':'postLeaderboardStudent','Item':{'periodKey':'" + str(leaderBoardPeriod) + "','StudentName':'" + name + "','score':'" + str(score) + "'}}"
             "TableName": "classLeaderboardTable",
