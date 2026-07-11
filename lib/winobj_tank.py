@@ -178,7 +178,7 @@ class Tank(WinObj):
         needToTurnFirst = False
         nextCommand = self.queuedCommands[0]
         if isinstance(nextCommand, TankCmd_Move) or isinstance(nextCommand, TankCmd_Shoot):
-            if dot(unit(self.dir), unit(nextCommand.dir)) < 0.999:
+            if dot(unit(self.dir), unit(nextCommand.dir)) < 0.999 and lengthSqr(nextCommand.dir) > 0.001:
                 nextCommand = TankCmd_Turn(nextCommand.dir)
                 needToTurnFirst = True
         
