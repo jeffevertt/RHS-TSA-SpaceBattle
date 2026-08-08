@@ -15,4 +15,4 @@ def updateShip1(ship: Ship, powerUps: List[PowerUp], targets: List[Target]):
 ####################################################################################################
 WindowArena(userCode1 = updateShip1,
             gameConfig = WindowArenaConfig.SPACE_BATTLE,
-            windowTitle = "Lab 16: Space Battle!").runGameLoop()
+            windowTitle = "TSA@RHS: Space Battle!").runGameLoop()
