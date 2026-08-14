@@ -9,25 +9,25 @@ class ShipCmd:
     def description(self):
         return "ShipCmd"
 class ShipCmd_Thrust(ShipCmd):
-    def __init__(self, dst):
+    def __init__(self, dst : float):
         super().__init__()
         self.dst = dst
     def description(self):
         return f"Thrust ({self.dst:.2f})"
 class ShipCmd_ThrustLeft(ShipCmd):
-    def __init__(self, angle):
+    def __init__(self, angle : float):
         super().__init__()
         self.angle = abs(angle)
     def description(self):
         return f"ThrustLeft ({self.angle:.2f}°)"
 class ShipCmd_ThrustRight(ShipCmd):
-    def __init__(self, angle):
+    def __init__(self, angle : float):
         super().__init__()
         self.angle = abs(angle)
     def description(self):
         return f"ThrustRight ({self.angle:.2f}°)"
 class ShipCmd_Shoot(ShipCmd):
-    def __init__(self, dir):
+    def __init__(self, dir : v2):
         super().__init__()
         self.dir = unit(dir)
     def description(self):
